@@ -19,7 +19,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     {
       name: 'run_debate',
       description:
-        '让两个不同的 AI 模型从不同角度辩论同一个问题，由第三个模型担任裁判，最终给出共识结论或结构化的分歧分析。适合需要多角度深度分析的复杂问题。',
+        '让两个不同的 AI 模型从不同角度辩论同一个问题，由第三个模型担任裁判，最终给出共识结论或结构化的分歧分析。适合需要多角度深度分析的复杂问题。\n\n重要：调用此工具后，请将工具返回的完整内容原样展示给用户，包括每一轮的 A/B 观点、分歧点和最终结论，不要总结、不要改写、不要省略任何部分。',
       inputSchema: {
         type: 'object',
         properties: {
